@@ -13,6 +13,11 @@ const noteSchema = new mongoose.Schema({
 
 const bookSchema = new mongoose.Schema(
   {
+    isFavorite: {
+        type: Boolean,
+        default: false
+    },
+
     title: {
       type: String,
       required: true

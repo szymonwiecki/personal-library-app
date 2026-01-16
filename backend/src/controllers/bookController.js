@@ -34,6 +34,7 @@ exports.createBook = async (req, res) => {
   }
 };
 
+
 // PUT update book
 exports.updateBook = async (req, res) => {
   try {
@@ -69,3 +70,32 @@ exports.addNote = async (req, res) => {
     res.status(400).json({ message: 'Błąd dodawania notatki' });
   }
 };
+
+// DELETE note
+exports.deleteNote = async (req, res) => {
+  try {
+    const { id, noteId } = req.params;
+
+    const book = await Book.findById(id);
+    if (!book) {
+      return res.status(404).json({ message: 'Nie znaleziono książki' });
+    }
+
+    book.notes = book.notes.filter(
+      (note) => note._id.toString() !== noteId
+    );
+
+    await book.save();
+    res.json(book); 
+  } catch (error) {
+    res.status(400).json({ message: 'Błąd usuwania notatki' });
+  }
+};
+
+exports.toggleFavorite = async (req, res) => {
+  const book = await Book.findById(req.params.id);
+  book.isFavorite = !book.isFavorite;
+  await book.save();
+  res.json(book);
+};
+

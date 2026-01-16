@@ -1,0 +1,22 @@
+.notes {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.note button {
+  background-color: #d32f2f;
+}
+
+.note button:hover {
+  background-color: #a62828;
+}
