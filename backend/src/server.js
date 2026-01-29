@@ -5,15 +5,22 @@ const cors = require('cors');
 require('dotenv').config();
 const connectDB = require('./config/db');
 const bookRoutes = require('./routes/bookRoutes');
+const authRoutes = require('./routes/authRoutes');
+
+
 
 const app = express();
 
 // połączenie z bazą
 connectDB();
 
+
+
 // middleware
 app.use(cors());
 app.use(express.json());
+
+app.use('/api/auth', authRoutes);
 
 app.use('/api/books', bookRoutes);
 
