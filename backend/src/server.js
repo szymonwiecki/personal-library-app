@@ -24,7 +24,7 @@ app.use('/api/auth', authRoutes);
 
 app.use('/api/books', bookRoutes);
 
-// testowy endpoint
+// test
 app.get('/', (req, res) => {
   res.send('📚 Personal Library API działa!');
 });

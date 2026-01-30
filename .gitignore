@@ -1,9 +1,6 @@
-# Zależności (bardzo duży folder, instalowany przez npm/yarn)
-node_modules
-
-# Pliki konfiguracyjne i sekrety (BARDZO WAŻNE - nigdy nie wysyłaj do repozytorium)
+node_modules/
+dist/
+build/
 .env
-
-# Foldery budowania aplikacji (generowane automatycznie)
-dist
-build
+.DS_Store
+coverage/

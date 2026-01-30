@@ -1,66 +1,100 @@
 # 📚 Personal Library App
 
-Aplikacja webowa typu **full-stack** służąca do zarządzania biblioteczką książek.  
-Umożliwia  dodawanie książek z Google Books, oznaczanie ulubionych pozycji oraz tworzenie notatek przypisanych do książek.
+Aplikacja internetowa do zarządzania osobistą kolekcją książek. 
+Pozwala użytkownikom na tworzenie wirtualnej biblioteki, wyszukiwanie nowych pozycji za pomocą Google Books API oraz prowadzenie notatek dla każdej książki.
 
-Projekt został wykonany jako aplikacja kliencko-serwerowa z rozdzielonym frontendem i backendem.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
----
+## 📸 Zrzuty ekranu
 
-## 🎯 Cel projektu
+| Logowanie | Biblioteka | Google Api |
+|:---------:|:-----------------:|:-----------------:|
+| ![Login Screen](./ss/login.png) | ![Library Screen](./ss/home.png) | ![Library Screen](./ss/api.png) |
 
-Celem projektu było:
-- stworzenie kompletnej aplikacji webowej
-- wykorzystanie nowoczesnego stosu technologicznego (React, Vite, Tailwind CSS)
-- implementacja REST API
-- praca z MongoDB
-- zachowanie czytelnej architektury i dobrej organizacji kodu
+## ✨ Główne funkcjonalności
 
----
+* **🔐 Autentykacja:** Bezpieczne logowanie i rejestracja użytkowników (JWT). (niesety tylko autentykacja "konto" jest jedno.)
+* **🌍 Integracja z Google Books:** Wyszukiwanie książek w zewnętrznej bazie i dodawanie ich jednym kliknięciem.
+* **📝 Notatki:** Możliwość dodawania, wyświetlania i usuwania osobistych notatek do każdej książki.
+* **⭐ Ulubione:** Oznaczanie książek jako ulubione i filtrowanie widoku.
+* **🎨 Nowoczesny UI:** Responsywny interfejs zbudowany w oparciu o **Tailwind CSS** (Grid, Flexbox, Glassmorphism).
+* **🔎 Filtrowanie:** Szybkie przeszukiwanie własnej kolekcji po tytule lub autorze.
 
-## 🛠️ Wykorzystane technologie
+## 🛠️ Technologie
 
-### Frontend
-- **React 19**
-- **Vite**
-- **React Router DOM**
-- **Tailwind CSS 3**
-- **PostCSS**
-- **Fetch API**
-- **Context API**
+**Frontend:**
+* React (Vite)
+* Tailwind CSS (Styling)
+* React Router DOM (Nawigacja)
+* Context API (Zarządzanie stanem autoryzacji)
 
-### Backend
-- **Node.js**
-- **Express**
-- **MongoDB**
-- **Mongoose**
+**Backend:**
+* Node.js & Express
+* MongoDB & Mongoose (Baza danych)
+* JSON Web Token (Autentykacja)
 
-### Zewnętrzne API
-**Google Books API**
-- wyszukiwanie książek po tytule
-- pobieranie metadanych (autor, okładka, rok wydania)
-- dane normalizowane przed zapisem do bazy
-  
----
+## 🚀 Instalacja i uruchomienie
 
-## 🧠 Architektura frontendu
+Postępuj zgodnie z instrukcją, aby uruchomić projekt lokalnie.
 
-### Założenia
+### Wymagania wstępne
+* Node.js (wersja 14+)
+* Baza danych MongoDB (lokalna lub Atlas)
+* Tailwind v13
 
-- separacja logiki (pages / components / api)
-- brak zewnętrznych bibliotek UI
-- stylowanie wyłącznie przez **Tailwind CSS**
-- komponenty wielokrotnego użytku
-- czytelny routing
+### 1. Klonowanie repozytorium
+```bash
+git clone [https://github.com/twoj-nick/personal-library-app.git](https://github.com/twoj-nick/personal-library-app.git)
+cd personal-library-app
+```
+### ⚙️ 2. Backend (Serwer)
 
-### Stylowanie
+Przejdź do folderu backendu:
 
-- Tailwind CSS (podejście *utility-first*)
-- responsywność (*mobile-first*)
-- animacje CSS (`fade-in`)
-- brak klasycznych plików `.css` per komponent
+```bash
+cd backend
+npm install
+```
+Utwórz plik .env w katalogu backend i uzupełnij dane:
 
----
-|
+```bash
+PORT=5000
+MONGO_URI=mongodb+srv://user:password@cluster.cof2i8k.mongodb.net/?appName=cluster
+JWT_SECRET=twoj_klucz
+```
+Uruchom serwer:
+
+```bash
+npm run dev
+```
+### 💻 3. Frontend (Klient)
+
+W nowym oknie terminala przejdź do folderu frontendu:
+
+```bash
+cd frontend
+npm install
+```
+Upewnij się, że Tailwind CSS jest zainicjalizowany:
+
+```bash
+npx tailwindcss init -p
+```
+Uruchom aplikację:
+
+```bash
+npm run dev
+```
+### 🤝 Autor
+
+Szymon W
+
+
+
+
+
 
 

@@ -31,7 +31,6 @@ const Login = () => {
   };
 
   return (
-    // CONTENER GŁÓWNY: Pełna wysokość (min-h-screen), Flexbox centrujący (items-center justify-center)
     <div className="min-h-screen flex items-center justify-center bg-red-500">
       
       {/* KARTA: Biała, zaokrąglona, cień */}

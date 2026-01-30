@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Notes from './Notes';
-// import './BookItem.css'; // ❌ USUŃ TEN IMPORT
+
 
 const BookItem = ({
   book,
@@ -99,8 +99,7 @@ const BookItem = ({
           </>
         )}
 
-        {/* Notatki - zakładam, że Notes w środku ma jakieś style, 
-            ale kontener tutaj zapewni odstęp */}
+        {/* Notatki */}
         <div className="mt-4 pt-4 border-t border-gray-100">
              <Notes book={book} onNotesUpdate={onNotesUpdate} />
         </div>

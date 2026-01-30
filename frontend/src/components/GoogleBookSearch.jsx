@@ -17,8 +17,7 @@ const GoogleBookSearch = ({ onAdd }) => {
       setError('');
       setResults([]);
       
-      const books = await searchBooks(query); // Używamy Twojej funkcji API
-      
+      const books = await searchBooks(query); 
       if (!books || !books.length) {
         setError('Brak wyników wyszukiwania');
       } else {
@@ -31,7 +30,7 @@ const GoogleBookSearch = ({ onAdd }) => {
     }
   };
 
-  // Kliknięcie poza komponentem czyści wyniki
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
@@ -92,7 +91,7 @@ const GoogleBookSearch = ({ onAdd }) => {
                 <button 
                   onClick={() => {
                     onAdd(book);
-                    setResults([]); // Zamknij po dodaniu
+                    setResults([]); 
                     setQuery('');
                   }}
                   className="mt-auto bg-green-600 hover:bg-green-700 text-white text-xs py-1.5 px-3 rounded self-start transition"

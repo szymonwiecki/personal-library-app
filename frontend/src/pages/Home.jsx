@@ -42,7 +42,6 @@ const Home = () => {
     loadBooks();
   }, []);
 
-  // Handlery (bez zmian w logice)
   const handleAddBook = async (book) => {
     const newBook = await addBook(book);
     setBooks(prev => [newBook, ...prev]);
